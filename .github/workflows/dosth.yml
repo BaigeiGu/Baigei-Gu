@@ -1,0 +1,11 @@
+name: test
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"
+
+jobs:
+  update:
+    runs-on: "ubuntu-latest"
+    steps: 
+      - run: curl https://youshou-status.baigei.workers.dev/update
